@@ -5,11 +5,28 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/249aeb9f84.js" crossorigin="anonymous"></script>
+
   </head>
 
   <body>
+  <div class="col-sm-12 col-sm-offset-2">
+    <div class="d-flex p-2 bd-highlight justify-content-between">
+      <p>
+        <%= link_to articles_path do %>
+          Wikinimous
+        <% end %>
+      </p>
+      <p>
+        <%= link_to new_article_path do %>
+          <i class="fa fa-plus"></i> Add a new task
+        <% end %>
+      </p>
+    </div>
+  </div>
     <%= yield %>
   </body>
 </html>

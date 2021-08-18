@@ -1,2 +1,11 @@
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
+<div class="col-sm-8 col-sm-offset-2">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.content %></p>
+
+<%= link_to edit_article_path do %>
+  <i class="fa fa-pencil"></i>
+<% end %>
+<%= link_to articles_path(@article), method: :delete, data: { confirm: "Delete #{@article.title}?" } do %>
+  <i class="fa fa-trash-o" aria-hidden="true"></i>
+<% end %>
+</div>
