@@ -5,7 +5,7 @@
 <%= link_to edit_article_path do %>
   <i class="fa fa-pencil"></i>
 <% end %>
-<%= link_to articles_path(@article), method: :delete, data: { confirm: "Delete #{@article.title}?" } do %>
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Delete #{@article.title}?" } do %>
   <i class="fa fa-trash-o" aria-hidden="true"></i>
 <% end %>
 </div>
